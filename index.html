@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Hamiltonian Path</title>
+        <link rel="stylesheet" type="text/css" href="HamiltonianPath.css">
+        <style type="text/css">
+            /* This is used for the tutorial only */
+            body { font-family:Helvetica, Arial, sans-serif; }
+            span[class^='number-'] { display:inline-block; width:20px; height:20px; line-height:20px; border:1px solid #bbb; text-align:center; background:#fff; font-size:18px; cursor:default; margin:5px; }
+            span[class^='number-'].selectable { border:1px solid #555; background:#EAFCFF; }
+            span[class^='number-'].selected { background:#DDFFD7; opacity:0.5; border:1px solid #35A519; }
+            span.tutorial { display:block; }
+        </style>
+    </head>
+    <body>
+        <h1>Hamiltonian Path</h1>
+        <p>This page has been set up to replicate the challenge presented by the <em>Clock Puzzles</em> in the video game Final Fantasy XIII-2. These puzzles use a <em><a href="http://en.wikipedia.org/wiki/Hamiltonian_path">Hamiltonian Path</a></em> - that is, a "path that visits each vertex exactly once". Nathanial Johnston's <a href="http://www.njohnston.ca/2012/02/counting-and-solving-final-fantasy-xiii-2s-clock-puzzles/">Counting and Solving Final Fantasy XIII-2's Clock Puzzles</a> article gives a good insight into the math behind these.</p>
+        <p>The source can be found <a href="https://github.com/JamesDonnelly/HamiltonianPaths">on GitHub</a>.</p>
+        <h2>Tutorial</h2>
+        <p>The aim of this game is to fill all the squares by clicking on them. Simple, right? Well not quite! Once you've selected the a square it will no longer be selectable and you will only be able to select the squares adjacent thereafter. The numbers within the squares represent how far away you'll be able to select once that square has been selected. This works in both directions and there are no boundaries to the game <em>board</em> - it loops around. To begin the game, you simply click on any of the squares.<br>
+            Take for example this set up:</p>
+        <p>
+            <span class="tutorial indented"><strong><span class="number-1">1</span> <span class="number-1">1</span> <span class="number-2">2</span> <span class="number-1">1</span> <span class="number-3">3</span> <span class="number-2">2</span></strong></span>
+            If you click on the <strong class="number-2">2</strong> in the middle, that square will now be filled and the two squares two to the left and right of it will now be selectable:
+            <span class="tutorial indented"><strong><span class="number-1 selectable">1</span> <span class="number-1">1</span> <span class="number-2 selected">2</span> <span class="number-1">1</span> <span class="number-3 selectable">3</span> <span class="number-2">2</span></strong></span>
+            If you then clicked on the <strong class="number-1">1</strong> on the left, the next selectable squares would be the ones to the left and right of that square.<br>As mentioned before, this loops around, so when this moves to the left, as there are no remaining squares to the left the selection moves on to the <strong class="number-2">2</strong> on the far right.
+            <span class="tutorial indented"><strong><span class="number-1 selected">1</span> <span class="number-1 selectable">1</span> <span class="number-2 selected">2</span> <span class="number-1">1</span> <span class="number-3">3</span> <span class="number-2 selectable">2</span></strong></span>
+            If you were to then select the <strong class="number-1">1</strong> on the left...
+            <span class="tutorial indented"><strong><span class="number-1 selected">1</span> <span class="number-1 selected">1</span> <span class="number-2 selected">2</span> <span class="number-1">1</span> <span class="number-3">3</span> <span class="number-2">2</span></strong></span>
+            ...it would be game over as you can no longer move. :-(
+        </p>
+        <h3>Simple Puzzle</h3>
+        <div id="puzzle1" class="indented">
+            <noscript><p class="noJS">Whoops! You have JavaScript disabled. These won't work without JavaScript. :-(</p></noscript>
+        </div>
+        <h3>Extended Simple Puzzle</h3>
+        <div id="puzzle2" class="indented">
+            <noscript><p class="noJS">Whoops! You have JavaScript disabled. These won't work without JavaScript. :-(</p></noscript>
+        </div>
+        <h3>Advanced Puzzle</h3>
+        <div id="puzzle3" class="indented">
+            <noscript><p class="noJS">Whoops! You have JavaScript disabled. These won't work without JavaScript. :-(</p></noscript>
+        </div>
+        <h3>Extended Advanced Puzzle</h3>
+        <div id="puzzle4" class="indented">
+            <noscript><p class="noJS">Whoops! You have JavaScript disabled. These won't work without JavaScript. :-(</p></noscript>
+        </div>
+        <h3>Difficult Puzzle</h3>
+        <div id="puzzle5" class="indented">
+            <noscript><p class="noJS">Whoops! You have JavaScript disabled. These won't work without JavaScript. :-(</p></noscript>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="HamiltonianPath.js"></script>
+        <script type="text/javascript" src="Test.js"></script>
+    </body>
+</html>

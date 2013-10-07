@@ -1,0 +1,14 @@
+div[class^='number-'] { display:inline-block; width:30px; height:30px; line-height:30px; border:1px solid #bbb; text-align:center; background:#fff; font-size:24px; margin:10px 5px; cursor:pointer; }
+div[class^='number-']:hover { background:#FAFEFF; border:1px solid #333; }
+div[class^='number-'].selectable { border:1px solid #000; background:#EAFCFF; font-weight:bold; }
+div[class^='number-'].selected, div.selected:hover { background:#ACC9A5; opacity:0.3; border:1px solid #35A519; }
+.number-1 { color:#e5a; }
+.number-2 { color:#a5e; }
+.number-3 { color:#ea5; }
+.number-4 { color:#5a5; }
+.number-5 { color:#a5a; }
+.number-6 { color:#aa5; }
+.number-7 { color:#5aa; }
+.number-8 { color:#e50; }
+a.puzzleRestart { margin-left:20px; font-size:90%; }
+small.puzzleNotice { margin-left:20px; }
