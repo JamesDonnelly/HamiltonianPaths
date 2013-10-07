@@ -1,7 +1,7 @@
-div[class^='number-'] { display:inline-block; width:30px; height:30px; line-height:30px; border:1px solid #bbb; text-align:center; background:#fff; font-size:24px; margin:10px 5px; cursor:pointer; }
-div[class^='number-']:hover { background:#FAFEFF; border:1px solid #333; }
-div[class^='number-'].selectable { border:1px solid #000; background:#EAFCFF; font-weight:bold; }
-div[class^='number-'].selected, div.selected:hover { background:#ACC9A5; opacity:0.3; border:1px solid #35A519; }
+[class^='number-'] { display:inline-block; width:30px; height:30px; line-height:30px; border:1px solid #bbb; text-align:center; background:#fff; font-size:24px; margin:10px 5px; cursor:pointer; }
+[class^='number-']:hover { background:#FAFEFF; border:1px solid #333; }
+[class^='number-'].selectable { border:1px solid #000; background:#EAFCFF; font-weight:bold; }
+[class^='number-'].selected, div.selected:hover { background:#ACC9A5; opacity:0.3; border:1px solid #35A519; }
 .number-1 { color:#e5a; }
 .number-2 { color:#a5e; }
 .number-3 { color:#ea5; }
